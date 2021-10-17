@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --main-bg-color: #C70039;
+    --main-a-color: #fff;
+    --main-hover-color: #ffffff52;
+    --main-bg-shadow: #0000005c;
+    /* fuente PARALLAX */
+    --main-font-parallax: fantasy;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    background: var(--main-bg-color);
+}
+header .contenedorHeader {
+    padding: 20px 50px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .contenedorHeader a {
+    color: var(--main-a-color);
+    text-decoration: none;
+    text-transform: uppercases;
+    font-weight: bold;
+}
+header .contenedorHeader ul {
+    list-style: none;
+    display: flex;
+}
+header .contenedorHeader ul li {
+    margin-left: 20px;
+}
+header .contenedorHeader ul li a {
+    color: var(--main-hover-color);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .contenedorHeader ul li:hover a {
+    color: var(--main-a-color)
+}
+
+/* img parallax */
+header .img {
+    position: relative;
+    margin: 50px auto;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 4px 4px 10px 0 var(--main-bg-shadow);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .img::before {
+    content: 'PARALLAX';
+    position: absolute;
+    color: var(--main-a-color);
+    font-family: var(--main-font-parallax);
+    font-size: 4em;
+    z-index: 100;
+}
+header .img img {
+    position: relative;
+    width: 130%;
+    object-fit: cover;
+}
